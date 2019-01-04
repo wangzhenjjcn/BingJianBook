@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
 import com.bingjian.book.domain.User;
 import com.bingjian.book.domain.UserCreateForm;
 import com.bingjian.book.domain.validator.UserCreateFormValidator;
@@ -65,7 +66,7 @@ public class UserController {
     }
 
     @PreAuthorize("hasAuthority('ADMIN')")
-    @RequestMapping(value = "/user/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/create", method = RequestMethod.POST )
     public String handleUserCreateForm(@Valid @ModelAttribute("form") UserCreateForm form, BindingResult bindingResult) {
         LOGGER.debug("Processing user create form={}, bindingResult={}", form, bindingResult);
         if (bindingResult.hasErrors()) {
@@ -83,4 +84,24 @@ public class UserController {
         return "redirect:/users";
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

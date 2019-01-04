@@ -1,5 +1,6 @@
 package com.bingjian.book.controller;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,8 @@ import com.bingjian.book.domain.CurrentUser;
 
 @Controller
 public class HomeController {
-
+	
+	
     @SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
 
@@ -30,6 +32,7 @@ public class HomeController {
         return "home";
     }
 
+    
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView getLoginPage(@RequestParam(required = false) String error) {
         return new ModelAndView("login", "error", error);
